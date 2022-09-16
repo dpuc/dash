@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <span>Crear persona</span>
+                    <!-- <button class="btn btn-primary float-end">Nuevo</button> -->
+                    <form action="" [formGroup]="personForm" (ngSubmit)="agregarPersona()">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre de persona</label>
+                            <input type="text" formControlName="name" class="form-control" id="name" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="last_name" class="form-label">Apellido</label>
+                            <input type="text" formControlName="last_name" class="form-control" id="last_name" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="curp" class="form-label">CURP</label>
+                            <input type="text" formControlName="curp" class="form-control" id="curp" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="peso" class="form-label">Peso</label>
+                            <input type="text" formControlName="peso" class="form-control" id="peso" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="altura" class="form-label">Altura</label>
+                            <input type="text" formControlName="altura" class="form-control" id="altura" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="sexo" class="form-label">Sexo</label>
+                            <input type="text" formControlName="sexo" class="form-control" id="sexo" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="zona" class="form-label">Zona</label>
+                            <input type="text" formControlName="zona" class="form-control" id="zona" >
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="/" class="btn btn-secondary btn-lg float-start"> Regresar </button>
+                            <button type="submit" [disabled]="personForm.invalid" class="btn btn-primary btn-lg float-end"> Aceptar </button>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
